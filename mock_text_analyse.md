@@ -50,7 +50,10 @@ crypto key generate rsa modulus 1024
 ip ssh version 2
 line vty 0 4
 transport input ssh
-login local
+exit
+aaa authentication login SSH-METHOD local
+line vty 0 4
+login authentication SSH-METHOD
 ```
 
 # 5. Site-to-Site IPsec VPN on R1 (20 marks)
