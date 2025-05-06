@@ -115,7 +115,7 @@ CLI (on ASA):
 hostname HAN123456
 domain-name HAN123456.com
 enable password cisco12345
-username Admin01 password admin01pass privilege 15
+username Admin01 password admin01pass
 
 aaa authentication ssh console LOCAL
 
@@ -143,7 +143,6 @@ crypto key generate rsa modulus 1024
 
 ssh 192.168.10.0 255.255.255.0 inside
 ssh timeout 8
-ssh version 2
 
 route outside 0.0.0.0 0.0.0.0 209.165.200.233
 ```
