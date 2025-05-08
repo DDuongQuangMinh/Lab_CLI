@@ -92,10 +92,12 @@ access-list 110 permit tcp 172.30.3.0 0.0.0.255 any
 
 class-map type inspect match-all INTERNAL-CLASS-MAP
 match access-group 110
+exit
 
 policy-map type inspect IN-2-OUT-PMAP
 class type inspect INTERNAL-CLASS-MAP
 inspect
+exit #back to normal config
 
 zone security IN-ZONE
 zone security OUT-ZONE
